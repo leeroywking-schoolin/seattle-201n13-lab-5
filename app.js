@@ -28,7 +28,10 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
   var c = a* b;
-  return c;
+  var output = [];
+  output.push(c);
+  output.push('The product of '+a+' and '+b+' is '+c+'.');
+  return output;
 }
 
 // Here is the test for multiply(); uncomment it to run it

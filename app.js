@@ -75,7 +75,15 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
+  var arraySum = 0
+  var i;
+  var arrayList = [];
+  for (i = 0; i < testArray.length; i++) {
+    arraySum += testArray[i];
+    arrayList.shift(testArray[i])
+    console.log(arraySum);
 
+  }
 }
 
 // Here is the test for sumArray(); uncomment it to run it

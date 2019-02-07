@@ -104,11 +104,20 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
-}
+  var arrayMult = 1
+    for (var i = (multArr.length -1); i >= 0 ; i--) {
+      arrayMult = multiply(arrayMult, multArr[i]);
+      arrayMult = arrayMult[0];
+    }
+    // The numbers 2,3,4 have a product of 24.
+    var firstString = "The numbers ";
+    var secondString = " have a product of ";
+    var string = (firstString + multArr + secondString + arrayMult + '.');
+    return ([arrayMult, string]);
+  }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 

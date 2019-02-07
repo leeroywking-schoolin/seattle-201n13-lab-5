@@ -75,14 +75,18 @@ var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
   var arraySum = 0
-    for (i = (sumArr.length - 1); i >= 0 ; i--) {
+    for (var i = (sumArr.length - 1); i >= 0 ; i--) {
       // console.log("this is the value I'm adding " + sumArr[i])
       arraySum = sum(arraySum, sumArr[i]);
+      arraySum = arraySum[0];
       // console.log("This is the total so far "+arraySum);
       // console.log(arraySum);
     }
-    "2,3,4 was passed in as an array of numbers, and 9 is their sum."
-    return (sumArr + " was passed in as an array of numbers, and " + arraySum+ " is their sum.")
+    "2,3,4 was passed in as an array of numbers, and 9 is their sum.";
+    var firstString = " was passed in as an array of numbers, and ";
+    var secondString = " is their sum.";
+    var string = (sumArr + firstString + arraySum + secondString);
+    return ([arraySum, string]);
   }
 
 // Here is the test for sumArray(); uncomment it to run it

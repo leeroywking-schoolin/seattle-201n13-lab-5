@@ -50,10 +50,12 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
   var sumAndMultiplyArray = []
-  var d = (a + b + c);
-  var e = (a * b * c);
-  sumAndMultiplyArray.push(a + b + c);
-  sumAndMultiplyArray.push(a * b * c);
+  var d = sum(a, b)
+  var e= sum(d, c);
+  var f = multiply(a, b)
+  var g= multiply(f,c);
+  sumAndMultiplyArray.push(e);
+  sumAndMultiplyArray.push(g);
   sumAndMultiplyArray.push(a+" and "+b+" and "+c+" sum to "+d+".");
   sumAndMultiplyArray.push("The product of "+a+" and "+b+" and "+c+" is "+e+".");
   return sumAndMultiplyArray;
@@ -76,15 +78,15 @@ var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
   var arraySum = 0
-  var i;
-  var arrayList = [];
-  for (i = 0; i < testArray.length; i++) {
-    arraySum += testArray[i];
-    arrayList.shift(testArray[i])
-    console.log(arraySum);
-
+    for (i = (sumArr.length - 1); i >= 0 ; i--) {
+      // console.log("this is the value I'm adding " + sumArr[i])
+      arraySum = arraySum + sumArr[i];
+      // console.log("This is the total so far "+arraySum);
+      // console.log(arraySum);
+    }
+    "2,3,4 was passed in as an array of numbers, and 9 is their sum."
+    return (sumArr + " was passed in as an array of numbers, and " + arraySum+ " is their sum.")
   }
-}
 
 // Here is the test for sumArray(); uncomment it to run it
 
